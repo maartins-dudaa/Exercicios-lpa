@@ -56,3 +56,14 @@ Route::get('receber/nome', function(Request $request){
                     $resultado = $primeiraEntrada * $segundaEntrada;
                     return $resultado;
                 });
+
+
+                Route::get('média', function(Request $request){
+                    $primeiraEntrada = $request->input('primeira nota');
+                    $segundaEntrada = $request->input('segunda nota');
+                    $terceiraEntrada = $request->input('terceira nota');
+                    $quartaEntrada = $request->input('quarta nota');
+                    $quintaEntrada =$request->input('quinta nota');
+                    $media = ($primeiraEntrada + $segundaEntrada + $terceiraEntrada + $quartaEntrada + $quintaEntrada)/5;
+                    return $media;
+                });
