@@ -133,3 +133,12 @@ Route::get('receber/nome', function(Request $request){
                             $totalSegundos = (60 * 60)*$numeroDias;
                             return 'O total de horas é ' . $totalHoras . ', O total de minutos é: ' . $totalMinutos . " e o de segundos é :" . $totalSegundos;
                         });
+
+
+                        Route::get('Compra', function(Request $request){
+                            $produtoPreço = $request->input('produtoPreço');
+                            $produtoQuantidade = $request->input('produtoQuantidade');
+                            $valorTotal = $produtoPreço * $produtoQuantidade;
+                            return $valorTotal;
+                        });
+                        
