@@ -90,3 +90,12 @@ Route::get('receber/nome', function(Request $request){
                             $resultado = $lado1 * $lado2;
                             return $resultado;
                         });
+
+
+                        Route::get('desconto', function(Request $request){
+                            $valorProduto = $request->input('preço');
+                            $descontoDesejado = $request->input('desconto desejado');
+                            $desconto = ($valorProduto * $descontoDesejado)/100;
+                            $resultado = $valorProduto - $desconto;
+                            return $resultado;
+                        });
