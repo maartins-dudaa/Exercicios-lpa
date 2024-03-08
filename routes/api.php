@@ -108,3 +108,11 @@ Route::get('receber/nome', function(Request $request){
                             $salarioAtual = $primeiroSalario + $valorAumento;
                             return 'Salario anterior: ' . $primeiroSalario . '; Percentual de aumento: ' . $percentualAumento . ', Salario atual: ' . $salarioAtual;
                         });
+
+
+                        Route::get('recompensa', function(Request $request){
+                            $valorCompra = $request->input('valorCompra');
+                            $pontosRecompensa = $valorCompra/10;
+                            return 'Pontos de recompensa: ' . $pontosRecompensa;
+                        });
+                        
