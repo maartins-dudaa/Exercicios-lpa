@@ -30,3 +30,12 @@ Route::get('receber/nome', function(Request $request){
                 $soma = ($primeiraEntrada + $segundaEntrada);
                 return $soma;
                 });
+
+
+                Route::get('subtrair', function(Request $request){
+                    $primeiraEntrada = $request->input('primeiro numero');
+                    $segundaEntrada = $request->input('segundo numero');
+                    $terceiraEntrada = $request->input('terceiro numero');
+                    $subtração = ($primeiraEntrada - $segundaEntrada - $terceiraEntrada);
+                    return $subtração;
+                });
