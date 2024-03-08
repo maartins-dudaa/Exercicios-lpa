@@ -123,4 +123,13 @@ Route::get('receber/nome', function(Request $request){
                             $comissaoPercentual = ($totalVendas * 5)/100;
                             return $comissaoPercentual;
                         });
+                 
                         
+
+                        Route::get('dias', function(Request $request){
+                            $numeroDias = $request->input('numeroDias');
+                            $totalHoras = 24*$numeroDias;
+                            $totalMinutos = (60 * 24)*$numeroDias;
+                            $totalSegundos = (60 * 60)*$numeroDias;
+                            return 'O total de horas é ' . $totalHoras . ', O total de minutos é: ' . $totalMinutos . " e o de segundos é :" . $totalSegundos;
+                        });
