@@ -99,3 +99,12 @@ Route::get('receber/nome', function(Request $request){
                             $resultado = $valorProduto - $desconto;
                             return $resultado;
                         });
+
+
+                        Route::get('salario', function(Request $request){
+                            $primeiroSalario = $request->input('salario anterior');
+                            $percentualAumento = $request->input('percentual de aumento');
+                            $valorAumento = ($primeiroSalario * $percentualAumento)/100;
+                            $salarioAtual = $primeiroSalario + $valorAumento;
+                            return 'Salario anterior: ' . $primeiroSalario . '; Percentual de aumento: ' . $percentualAumento . ', Salario atual: ' . $salarioAtual;
+                        });
