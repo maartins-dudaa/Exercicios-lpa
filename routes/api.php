@@ -8,9 +8,18 @@ Route::get('receber/nome', function(Request $request){
     return $nome;
     });
 
-    
+
     Route::get('nome/idade', function(Request $request){
         $nome = $request->input('nome');
         $idade = $request->input('idade');
         return 'Meu nome é ' . $nome . ' tenho ' . $idade . 'anos de idade';
         });
+
+
+        Route::get('nome/nascimento/cidade', function(Request $request){
+            $nome = $request->input('nome');
+            $nascimento = $request->input ('nascimento');
+            $cidade = $request->input('cidade');
+            return 'Meu nome é ' . $nome . ' nasci no ano de ' . $nascimento . ' na cidade de  ' . $cidade;
+            });
+            
