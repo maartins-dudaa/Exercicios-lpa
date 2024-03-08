@@ -82,3 +82,11 @@ Route::get('receber/nome', function(Request $request){
                         $resultado = $numero*2;
                         return 'O dobro do numero ' . $numero . ' e igual a ' . $resultado;
                         });
+
+
+                        Route::get('area', function(Request $request){
+                            $lado1 = $request->input('primeiro lado');
+                            $lado2 = $request->input('segundo lado');
+                            $resultado = $lado1 * $lado2;
+                            return $resultado;
+                        });
