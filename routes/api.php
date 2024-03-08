@@ -75,3 +75,10 @@ Route::get('receber/nome', function(Request $request){
                     $resultado = $segundaEntrada/$primeiraEntrada;
                     return $resultado;
                     });
+
+
+                    Route::get('dobro', function(Request $request){
+                        $numero = $request->input('numero');
+                        $resultado = $numero*2;
+                        return 'O dobro do numero ' . $numero . ' e igual a ' . $resultado;
+                        });
