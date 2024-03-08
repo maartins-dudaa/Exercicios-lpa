@@ -115,4 +115,12 @@ Route::get('receber/nome', function(Request $request){
                             $pontosRecompensa = $valorCompra/10;
                             return 'Pontos de recompensa: ' . $pontosRecompensa;
                         });
+
+                        
+
+                        Route::get('comissao', function(Request $request){
+                            $totalVendas = $request->input('totalVendas');
+                            $comissaoPercentual = ($totalVendas * 5)/100;
+                            return $comissaoPercentual;
+                        });
                         
