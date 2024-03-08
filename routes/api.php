@@ -39,3 +39,13 @@ Route::get('receber/nome', function(Request $request){
                     $subtração = ($primeiraEntrada - $segundaEntrada - $terceiraEntrada);
                     return $subtração;
                 });
+
+
+                Route::get('divisao', function(Request $request){
+                    $primeiraEntrada = $request->input('primeiro numero');
+                    $segundaEntrada = $request->input('segundo numero');
+                    $resultado = $primeiraEntrada/$segundaEntrada;
+                    return $resultado;
+                });
+
+                
