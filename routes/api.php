@@ -67,3 +67,11 @@ Route::get('receber/nome', function(Request $request){
                     $media = ($primeiraEntrada + $segundaEntrada + $terceiraEntrada + $quartaEntrada + $quintaEntrada)/5;
                     return $media;
                 });
+
+
+                Route::get('divisao 2', function(Request $request){
+                    $primeiraEntrada = $request->input('primeiro numero');
+                    $segundaEntrada = $request->input('segundo numero');
+                    $resultado = $segundaEntrada/$primeiraEntrada;
+                    return $resultado;
+                    });
