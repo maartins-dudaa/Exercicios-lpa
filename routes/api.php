@@ -22,4 +22,11 @@ Route::get('receber/nome', function(Request $request){
             $cidade = $request->input('cidade');
             return 'Meu nome é ' . $nome . ' nasci no ano de ' . $nascimento . ' na cidade de  ' . $cidade;
             });
+
             
+            Route::get('somar', function(Request $request){
+                $primeiraEntrada = $request->input('primeiro numero');
+                $segundaEntrada = $request->input('segundo numero');
+                $soma = ($primeiraEntrada + $segundaEntrada);
+                return $soma;
+                });
