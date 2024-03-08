@@ -48,4 +48,11 @@ Route::get('receber/nome', function(Request $request){
                     return $resultado;
                 });
 
-                
+
+
+                Route::get('multiplicar', function(Request $request){
+                    $primeiraEntrada = $request->input('primeiro numero');
+                    $segundaEntrada = $request->input('segundo numero');
+                    $resultado = $primeiraEntrada * $segundaEntrada;
+                    return $resultado;
+                });
