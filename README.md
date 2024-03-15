@@ -13,30 +13,31 @@ Insomnia
 Visual Studio Code
 ## Como utilizar este repositório 
 1. Clone este repositório para seu ambiente de desenvolvimento local utilizando o comando: 
-``
+```
 git
  clone https://github.com/maartins-dudaa/Exercicios-lpa.git
-``
+```
 
 2. Acesse o diretório do projeto:
-``
+```
+
 cd exercícios-lpa
-``
+```
 
 3. Iniciando o projeto
-``
+```
 composer update
-``
+```
 
 4. Iniciando o servidor
-``
+```
 php artisan serve --port=80
-``
+```
 
 5. Acessar o Visual Studio Code
-``
+```
 code . 
-``
+```
 
 6. Importar arquivo do insomnia 
 
