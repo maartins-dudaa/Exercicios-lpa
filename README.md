@@ -14,8 +14,7 @@ Visual Studio Code
 ## Como utilizar este repositório 
 1. Clone este repositório para seu ambiente de desenvolvimento local utilizando o comando: 
 ```
-git
- clone https://github.com/maartins-dudaa/Exercicios-lpa.git
+git clone https://github.com/maartins-dudaa/Exercicios-lpa.git
 ```
 
 2. Acesse o diretório do projeto:
