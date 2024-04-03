@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use Symfony\Component\Console\Input\Input;
 
 Route::get('nome', function (Request $request) {
     $nome = $request->input('nome');
@@ -173,7 +174,7 @@ if($numero % 2 == 0){
 });
 
 
-Route::get('exercicio1', function(Request $request){
+Route::get('IN', function(Request $request){
 $numero = $request->input('numero');
 if($numero > 10){
     return  'O número ' .  $numero . ' é maior que 10';
@@ -441,4 +442,49 @@ Route::get('exercicio2', function(Request $request){
                             }
                             
                         });
-                    
+
+                      
+                      
+                        Route::get('questao1',function(Request $request){
+                            $nota1 = $request->input('nota1');
+                            $nota2 = $request->input('nota2');
+                            $nota3 = $request->input('nota3');
+                            $média = $nota1 + $nota2 + $nota3 /3;
+                            if($média >= 7){
+                                return 'Você foi aprovado(a), parabéns!';
+                            }else{
+                                return 'Você não foi aprovado(a), sinto muito!';
+                            }
+                        });
+
+
+                            
+                        Route::get('questao2', function(Request $request){
+                            $renda = $request->input('renda');
+                            if($renda == 1900){
+                                return 'Isento de imposto';
+                            } if($renda <= 2800){
+                                return 'Sua alíquota é de ' . $renda * 100/ 7  ;
+                            } if($renda <=3700){
+                                return 'Sua alíquota é de ' . $renda * 100/ 15  ;
+                            }if($renda >=3700){
+                                return 'Sua alíquota é de ' . $renda * 100 /22  ;
+                            }
+                        });
+
+                        
+                        
+                        
+                         Route::get('questao3', function(Request $request){
+                            $ano = $request->input('ano');
+                            if($ano % 4 ==0){
+                                return 'O ano de ' . $ano . ' é bissexto';
+                            }else{
+                                return 'O ano de ' . $ano . ' não é bissexto';
+                            }
+                        });
+
+
+                        
+
+                       
