@@ -229,4 +229,110 @@ Route::get('exercicio5', function(Request $request){
 });
 
 
+Route::get('exercicio1', function(Request $request){
+$numero = $request->input('numero');
+if($numero > 10){
+    return 'O número ' . $numero . ' é maior que 10';
+}else { 
+    return 'O número ' . $numero . ' não é maior que 10';
+}
+});
 
+
+
+Route::get('exercicio2', function(Request $request){
+    $numero = $request->input('numero');
+    if($numero > 0){
+        return 'O número ' . $numero . ' é positivo';
+    }
+    if($numero < 0){
+        return 'O número ' . $numero . ' é negativo';
+    }
+    if($numero == 0){
+        return 'O número é igual á zero';
+    }
+    });
+
+
+
+    Route::get('exercicio3', function(Request $request){
+        $idade = $request->input('idade');
+        
+        if($idade >= 18){
+            return "Você é maior de idade";
+        }else {
+            return "Você é menor de idade";
+        }
+        
+        });
+
+        Route::get('exercicio4', function(Request $request){
+            $numero = $request->input('numero');
+            if($numero % 2 == 0){
+                return 'O número ' . $numero . ' é par';
+            } else{
+                return 'O número ' . $numero . ' é impar';
+            }
+        });
+
+
+        Route::get('exercicio05',function(Request $request){
+            $primeiroNumero = $request->input('primeiroNumero');
+            $segundoNumero = $request->input('segundoNumero');
+            if($primeiroNumero > $segundoNumero){
+                return 'O número ' . $primeiroNumero . ' é o maior número';
+            } else {
+                return 'O número ' . $segundoNumero . ' é o maior número';
+            }
+        });
+
+
+        Route::get('exercicio06', function(Request $request){
+            $numero = $request->input('numero');
+            if ($numero % 9 == 0){
+                return ' O número ' . $numero . ' é divisível por 9';
+            }  else {
+                return 'O número ' . $numero . ' não é divisível por 9';
+            }
+        });
+
+
+        Route::get('exercicio07', function(Request $request){
+            $temperatura = $request->input('temperatura');
+            if ($temperatura >= 30){
+                return 'Está quente!' . ', fazendo ' . $temperatura . '°C';
+            } else {
+                return 'A temperatura é de ' . $temperatura . '°C';
+            }
+        });
+
+
+        Route::get('exercicio08', function(Request $request){
+            $numero = $request->input('numero');
+            if($numero % 7 == 0){
+                return 'O número ' . $numero . ' é divisível por 7';
+            }else{ return 'O número ' . $numero . ' não é dividível por 7';
+            }
+
+        }); 
+
+        Route::get('exercicio09', function(Request $request){
+            $idade = $request->input('idade');
+            
+            if($idade <= 12){
+                return "Você é uma criança";
+            }else {
+                return "Você não é uma criança";
+            }
+            
+            });
+
+            Route::get('exercicio10', function(Request $request){
+                $numero = $request->input('numero');
+                if($numero > 0 && $numero % 2 != 0){return 
+                'O número ' . $numero . ' é positivo e ímpar';
+            }else{return 'O número ' . $numero . ' não é positivo e impar';
+            }
+        });
+
+        
