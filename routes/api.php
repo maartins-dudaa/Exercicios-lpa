@@ -335,4 +335,110 @@ Route::get('exercicio2', function(Request $request){
             }
         });
 
+            Route::get('exercicio11', function(Request $request){
+                $numero = $request->input('numero');
+                if($numero > 100){
+                    return 'O número ' . $numero . ' é maior que 100';
+                } if($numero < 100){
+                    return 'O número  ' . $numero . ' é menor que 100';
+                }else{ return ' O número ' . $numero . ' é igual a 100';
+                }
+                    
+                 });
+
+
+                 Route::get('exercicio12', function(Request $request){
+                    $numero = $request->input('numero');
+                    if($numero % 6 == 0){ 
+                        return 'O número é divisível por 6';
+                    }else{
+                        return 'O número não é divisível por 6';
+                    }
+                 });
+
+                 Route::get('exercicio13', function(Request $request){
+                  $nome = $request->input('nome');
+                if($nome == 'Alice'){ 
+                    return 'Olá Alice !';
+                }else {
+                    return $nome;
+                }
         
+                
+                  
+                 });
+
+                 Route::get('exercicio14', function(Request $request){
+                $idade = $request->input('idade');
+                $carteira = $request->input('carteira');
+                if($idade >= 18 ){ 
+                    if($carteira == 'sim'){
+                        return 'Você pode dirigir';
+                    } 
+                }else{ 
+                    return 'Você não pode dirigir';
+                }
+            
+                 });
+
+                 
+                 
+                 Route::get('exercicio15', function(Request $request){
+                    $primeiroNumero = $request->input('primeiroNumero');
+                    $segundoNumero = $request->input('segundoNumero');
+                    if($primeiroNumero < $segundoNumero){
+                        return $primeiroNumero . ' é o menor número';
+                    }else{ 
+                        return $segundoNumero . ' é o menor número';
+                    }
+                 });
+
+
+
+                 Route::get('exercicio16', function(Request $request){
+                  $nome = $request->input('nome');
+                  $idade = $request->input('idade');
+                  if($idade >= 18){
+                    return 'Você é maior de idade, ' . $nome . '!';
+                  }else{
+                    return 'Você é menor de idade, ' . $nome;
+                  }
+                  });
+
+
+
+                  Route::get('exercicio17',function(Request $request){
+                    $primeiroNumero = $request->input('primeiroNumero');
+                    $segundoNumero = $request->input('segundoNumero');
+                    if($primeiroNumero == 0){
+                        return 'Nâo é possível efetuar a divisão, pois o primeiro número é 0';
+                    }else if($segundoNumero == 0){
+                        return 'Não é possível efetuar a divisão,pois o segundo número é 0';
+                    } else{;
+                        return($primeiroNumero / $segundoNumero );
+                    }
+                    });
+
+
+                    Route::get('exercicio18', function(Request $request){
+                        $primeiroNumero = $request->input('primeiroNumero');
+                        $segundoNumero = $request->input('segundoNumero');
+                        if($primeiroNumero / $segundoNumero >100){
+                            return 'O resultado da divisão é maior que 100';
+                        }else{
+                            return 'O resultado da divisão é menor que 100';
+                        }
+                    });
+
+                    Route::get('exercicio19', function(Request $request){
+                        $primeiroNumero = $request->input('primeiroNumero');
+                        $segundoNumero = $request->input('segundoNumero');
+                        $soma = $primeiroNumero + $segundoNumero;
+                            if($soma % 100 == 0){
+                                return   $primeiroNumero * $segundoNumero;
+                            } else{
+                                return   $primeiroNumero / $segundoNumero ;
+                            }
+                            
+                        });
+                    
