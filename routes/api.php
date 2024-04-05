@@ -487,4 +487,7 @@ Route::get('exercicio2', function(Request $request){
 
                         
 
+
+                        
+
                        
