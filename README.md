@@ -19,7 +19,7 @@ git clone https://github.com/maartins-dudaa/exercicios-lpa.git
 
 2. Acesse o diretório do projeto:
 ```
-cd exercícios-lpa
+cd exercicios-lpa
 ```
 
 3. Iniciando o projeto
